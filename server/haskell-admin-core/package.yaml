@@ -1,0 +1,57 @@
+name:                haskell-admin-core
+version:             0.1.0.0
+github:              "martin-bednar/haskell-admin"
+license:             MIT
+author:              "Martin Bednar"
+maintainer:          "example@example.com"
+copyright:           "2022 Martin Bednar"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/martin-bednar/haskell-admin#readme>
+
+ghc-options:
+- -Wall
+- -Wincomplete-uni-patterns
+- -Wincomplete-record-updates
+- -Wpartial-fields
+- -Wmonomorphism-restriction
+- -Wmissing-home-modules
+- -Widentities
+- -Wredundant-constraints
+- -Wmissing-export-lists
+
+dependencies:
+- base >= 4.7 && < 5
+- servant-server
+- wai
+- http-types
+- word8
+- bytestring
+- wai-cors
+- servant
+
+library:
+  source-dirs: src
+
+tests:
+  haskell-admin-core-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-admin-core
+    - hspec
+    - hspec-wai

@@ -1,0 +1,11 @@
+resolver: lts-18.18
+
+packages:
+- ./haskell-admin-core
+
+extra-deps:
+- github: martin-bednar/managed-functions
+  commit: 0a3c03c3f4cecb124ee6a9eceab40a99a0a81d65
+  subdirs:
+    - managed-functions
+    - managed-functions-http-connector
