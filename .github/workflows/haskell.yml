@@ -15,7 +15,7 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     env:
-      working-directory: ./server
+      stack-project-path: ./server
     steps:
     
     - name: Checkout repository
@@ -35,12 +35,16 @@ jobs:
     - name: Build Snapshot
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
-        stack --no-terminal test --only-snapshot
+        stack --no-terminal test --only-snapshot ${{env.stack-project-path}}
         
     - name: Stack Build
       run: |
-        stack --no-terminal build
+        stack --no-terminal build ${{env.stack-project-path}}
 
     - name: Stack Test
       run: |
-        stack --no-terminal test
+        stack --no-terminal test ${{env.stack-project-path}}
+    
+    - name: Stack Haddock
+      run: |
+        stack --no-terminal haddock ${{env.stack-project-path}}
