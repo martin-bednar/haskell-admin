@@ -2,7 +2,7 @@
 {-# LANGUAGE KindSignatures #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module Data.ComponentList
+module Admin.Components.ComponentList
   ( ComponentList(..)
   , namesOf
   , empty

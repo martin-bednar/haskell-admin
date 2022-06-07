@@ -15,7 +15,7 @@ module Admin.Components.Internal.TypeLevel
   , ManySymbolVal(..)
   ) where
 
-import Data.Component (Component(..))
+import Admin.Components.Component (Component(..))
 import Data.Data (Proxy(..))
 import GHC.TypeLits (KnownSymbol, Symbol, symbolVal)
 import Servant.API ((:<|>), (:>))

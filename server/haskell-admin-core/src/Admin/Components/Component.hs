@@ -7,7 +7,7 @@
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 
-module Data.Component
+module Admin.Components.Component
   ( Component(..)
   ) where
 

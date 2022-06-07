@@ -4,9 +4,9 @@ module Admin.Server.Middlewares
   ( middlewares
   ) where
 
-import Admin.Server.AuthMiddleware
 import Data.ByteString.Char8 (ByteString)
 import Network.Wai (Middleware)
+import Network.Wai.Middleware.BearerTokenAuth
 import Network.Wai.Middleware.Cors
 
 -- | Middlewares used in Haskell Admin
