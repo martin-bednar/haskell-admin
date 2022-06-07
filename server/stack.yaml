@@ -3,6 +3,7 @@ resolver:
 
 
 packages:
+- ./haskell-admin
 - ./haskell-admin-core
 - ./components/haskell-admin-health
 

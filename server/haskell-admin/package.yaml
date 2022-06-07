@@ -1,5 +1,5 @@
-name:                haskell-admin-core
-version:             0.1.0.0
+name:                haskell-admin
+version:             1.0.0.0
 github:              "martin-bednar/haskell-admin"
 license:             MIT
 author:              "Martin Bednar"
@@ -11,8 +11,8 @@ extra-source-files:
 - ChangeLog.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
+synopsis:           Remote Management Platform for Haskell Applications
+category:           Remote Management
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
@@ -32,27 +32,9 @@ ghc-options:
 
 dependencies:
 - base >= 4.7 && < 5
-- bytestring
-- http-types
-- servant
-- servant-server
+- haskell-admin-core
 - wai
-- wai-cors
-- wai-middleware-bearer
-- word8
+- bytestring
 
 library:
   source-dirs: src
-
-tests:
-  haskell-admin-core-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - haskell-admin-core
-    - hspec
-    - hspec-wai
