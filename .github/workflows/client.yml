@@ -10,7 +10,7 @@ jobs:
     defaults:
       run:
         working-directory: client
-        
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
+          cache-dependency-path: client/package-lock.json
       
       - name: Install dependencies
         run: npm install
