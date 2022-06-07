@@ -3,10 +3,18 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: wai-middleware-bearer-1.0.3@sha256:bc3e7edbfe0fe9a2bed5c538a009a1a53cace5eae3871dfc29572ddb54fca502,1675
+    pantry-tree:
+      size: 353
+      sha256: 39b7bf3dad9d3b6331ce64c47e79bc7dde74cf97810196693a9812e98caf477c
+  original:
+    hackage: wai-middleware-bearer-1.0.3@sha256:bc3e7edbfe0fe9a2bed5c538a009a1a53cace5eae3871dfc29572ddb54fca502,1675
 snapshots:
 - completed:
-    size: 586296
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/18.yaml
-    sha256: 63539429076b7ebbab6daa7656cfb079393bf644971156dc349d7c0453694ac2
-  original: lts-18.18
+    size: 618884
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/7.yaml
+    sha256: 57d4ce67cc097fea2058446927987bc1f7408890e3a6df0da74e5e318f051c20
+  original:
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/7.yaml

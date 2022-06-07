@@ -38,6 +38,7 @@ dependencies:
 - word8
 - bytestring
 - wai-cors
+- wai-middleware-bearer
 - servant
 
 library:

@@ -1,4 +1,9 @@
-resolver: lts-18.18
+resolver:
+  url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/19/7.yaml
+
 
 packages:
 - ./haskell-admin-core
+
+extra-deps:
+- wai-middleware-bearer-1.0.3@sha256:bc3e7edbfe0fe9a2bed5c538a009a1a53cace5eae3871dfc29572ddb54fca502,1675
