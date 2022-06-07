@@ -1,14 +1,9 @@
-name: Haskell CI
+name: Haskell Admin Server CI
 
-on:
-  pull_request:
-    branches: [ "main" ]
-  push:
-    branches: [ "main" ]
-    tags: [ "*.*.*" ]
+on: [push, pull_request]
 
 jobs:
-  build:
+  build-test-haddock:
     strategy:
       matrix:
         os: [ubuntu-latest]
