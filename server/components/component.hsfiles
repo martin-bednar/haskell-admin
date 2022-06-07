@@ -12,8 +12,8 @@ extra-source-files:
 - ChangeLog.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your component
-# category:            {{category}}{{^category}}Remote Management{{/category}}
+synopsis:            {{name}} Component for Haskell Admin
+category:            {{category}}{{^category}}Haskell Admin, Remote Management{{/category}}
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
