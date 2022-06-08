@@ -5,8 +5,10 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           haskell-admin-core
-version:        0.1.0.0
+version:        1.0.0.0
+synopsis:       Core Modules of Haskell Admin
 description:    Please see the README on GitHub at <https://github.com/martin-bednar/haskell-admin#readme>
+category:       Remote Management, Web
 homepage:       https://github.com/martin-bednar/haskell-admin#readme
 bug-reports:    https://github.com/martin-bednar/haskell-admin/issues
 author:         Martin Bednar

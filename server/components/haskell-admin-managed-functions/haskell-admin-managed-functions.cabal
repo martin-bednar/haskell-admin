@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           haskell-admin-managed-functions
-version:        0.1.0.0
+version:        1.0.0.0
 synopsis:       Managed Functions integration for Haskell Admin
 description:    Please see the README on GitHub at <https://github.com/martin-bednar/haskell-admin#readme>
 category:       Haskell Admin, Managed Functions, Remote Management

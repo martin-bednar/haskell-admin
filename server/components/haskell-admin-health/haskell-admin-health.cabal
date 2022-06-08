@@ -5,7 +5,7 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           haskell-admin-health
-version:        0.1.0.0
+version:        1.0.0.0
 synopsis:       Application Health Component for Haskell Admin
 description:    Please see the README on GitHub at <https://github.com/martin-bednar/haskell-admin#readme>
 category:       Haskell Admin, Remote Management
