@@ -2,6 +2,8 @@
 
 _Remote Management Suite for Haskell Applications_
 
+__This project is in an early stage of development. Expect things to break, and don't be suprised by the lack of documentation.__
+
 ## Basic information
 
 Haskell Admin allows you to easily manage a running Haskell application from a different machine. It consists of
