@@ -6,22 +6,21 @@ cabal-version: 1.12
 
 name:           haskell-admin-demo-app
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-admin-demo-app#readme>
-homepage:       https://github.com/githubuser/haskell-admin-demo-app#readme
-bug-reports:    https://github.com/githubuser/haskell-admin-demo-app/issues
+description:    Please see the README on GitHub at <https://github.com/martin-bednar/haskell-admin#readme>
+homepage:       https://github.com/martin-bednar/haskell-admin#readme
+bug-reports:    https://github.com/martin-bednar/haskell-admin/issues
 author:         Martin Bednar
-maintainer:     example@example.com
+maintainer:     bednam17@fit.cvut.cz
 copyright:      2022 Martin Bednar
-license:        BSD3
+license:        MIT
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/haskell-admin-demo-app
+  location: https://github.com/martin-bednar/haskell-admin
 
 executable haskell-admin-demo-app-exe
   main-is: Main.hs
