@@ -12,7 +12,7 @@
     export let status = unknownStatus
 
     const interval = setInterval(function() {
-        fetchEndpoint($connection, "system", "/status")
+        fetchEndpoint($connection, "health", "/status")
             .then(rsp => rsp.json())
             .then(val => {status = val})
             .catch(err => {

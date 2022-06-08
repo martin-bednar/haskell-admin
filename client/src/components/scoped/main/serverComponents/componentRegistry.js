@@ -2,9 +2,9 @@ import System from "./system/System.svelte"
 import ManagedFunctions from "./managedFunctions/ManagedFunctions.svelte"
 
 const components = new Map()
-components.set('system', {
+components.set('health', {
     svelte: System,
-    name: "System status"
+    name: "Application health"
     })
 components.set('managed', {
     svelte: ManagedFunctions,
