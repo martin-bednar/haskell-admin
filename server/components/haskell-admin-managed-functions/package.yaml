@@ -1,5 +1,5 @@
-name:                haskell-admin
-version:             1.0.0.0
+name:                haskell-admin-managed-functions
+version:             0.1.0.0
 github:              "martin-bednar/haskell-admin"
 license:             MIT
 author:              "Martin Bednar"
@@ -11,33 +11,42 @@ extra-source-files:
 - ChangeLog.md
 
 # Metadata used when publishing your package
-synopsis:           Remote Management Platform for Haskell Applications
-category:           Remote Management
+synopsis:            Managed Functions integration for Haskell Admin
+category:            Haskell Admin, Managed Functions, Remote Management
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
 description:         Please see the README on GitHub at <https://github.com/martin-bednar/haskell-admin#readme>
 
-ghc-options:
-- -Wall
-- -Wincomplete-uni-patterns
-- -Wincomplete-record-updates
-- -Wpartial-fields
-- -Wmonomorphism-restriction
-- -Wmissing-home-modules
-- -Widentities
-- -Wredundant-constraints
-- -Wmissing-export-lists
-
 dependencies:
 - base >= 4.7 && < 5
-- bytestring
 - haskell-admin-core
-- haskell-admin-health
-- haskell-admin-managed-functions
-- wai
+- managed-functions
+- managed-functions-http-connector
+- servant-server
 
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wpartial-fields
+- -Wredundant-constraints
 
 library:
   source-dirs: src
+
+tests:
+  haskell-admin-managed-functions-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-admin-managed-functions
+    - hspec
+    - hspec-wai

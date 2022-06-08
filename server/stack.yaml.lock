@@ -11,6 +11,27 @@ packages:
       sha256: 39b7bf3dad9d3b6331ce64c47e79bc7dde74cf97810196693a9812e98caf477c
   original:
     hackage: wai-middleware-bearer-1.0.3@sha256:bc3e7edbfe0fe9a2bed5c538a009a1a53cace5eae3871dfc29572ddb54fca502,1675
+- completed:
+    hackage: managed-functions-1.2.2.0@sha256:746e29065157e56247a8169ad9dd64143cb748a021ecf37496f56447e0ef10e6,2236
+    pantry-tree:
+      size: 1462
+      sha256: 921452eea634f8e92db7d16050d441b6fd79e86b8a53847b07ff489c08d0c39d
+  original:
+    hackage: managed-functions-1.2.2.0@sha256:746e29065157e56247a8169ad9dd64143cb748a021ecf37496f56447e0ef10e6,2236
+- completed:
+    hackage: managed-functions-http-connector-1.0.0@sha256:ba8b05e4ce028b4cf0ba2bd600e5e04eaea6673169827c8bb25d5707e9f4e6aa,1438
+    pantry-tree:
+      size: 391
+      sha256: fcb872fd953e2ea024edff6cee9787d98965d280b9d1a9d55eaad383152f891f
+  original:
+    hackage: managed-functions-http-connector-1.0.0@sha256:ba8b05e4ce028b4cf0ba2bd600e5e04eaea6673169827c8bb25d5707e9f4e6aa,1438
+- completed:
+    hackage: managed-functions-json-1.0.0@sha256:de0a5f2ed1ca7ba2d1099242dec47aebfa6652474d6dd7912d5a8069845b9adb,1327
+    pantry-tree:
+      size: 362
+      sha256: 6af91a42cece57275c14b3fa9b4981376102ca37381d14a9eb6d39baf1e6c1a6
+  original:
+    hackage: managed-functions-json-1.0.0@sha256:de0a5f2ed1ca7ba2d1099242dec47aebfa6652474d6dd7912d5a8069845b9adb,1327
 snapshots:
 - completed:
     size: 618884

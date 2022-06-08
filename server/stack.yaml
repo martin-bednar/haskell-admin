@@ -6,6 +6,10 @@ packages:
 - ./haskell-admin
 - ./haskell-admin-core
 - ./components/haskell-admin-health
+- ./components/haskell-admin-managed-functions
 
 extra-deps:
 - wai-middleware-bearer-1.0.3@sha256:bc3e7edbfe0fe9a2bed5c538a009a1a53cace5eae3871dfc29572ddb54fca502,1675
+- managed-functions-1.2.2.0@sha256:746e29065157e56247a8169ad9dd64143cb748a021ecf37496f56447e0ef10e6,2236
+- managed-functions-http-connector-1.0.0@sha256:ba8b05e4ce028b4cf0ba2bd600e5e04eaea6673169827c8bb25d5707e9f4e6aa,1438
+- managed-functions-json-1.0.0@sha256:de0a5f2ed1ca7ba2d1099242dec47aebfa6652474d6dd7912d5a8069845b9adb,1327

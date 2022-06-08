@@ -87,7 +87,7 @@ spec =
     describe "GET /greet" $ do
       it "responds with \"Hello World!\"" $ do
         get "/greet" `shouldRespondWith`
-          200 {matchBody = "Hello World!"}
+          200 {matchBody = "\"Hello World!\""}
 
 {-# START_FILE src/Admin/Component/MyComponent.hs #-}
 {-# LANGUAGE DataKinds #-}
