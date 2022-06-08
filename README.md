@@ -1,6 +1,6 @@
 # haskell-admin
 
-_Remote Management Platform for Haskell Applications_
+_Remote Management Suite for Haskell Applications_
 
 ## Usage
 
@@ -18,3 +18,15 @@ npm run dev
 cd server
 stack run haskell-admin-demo-app-exe
 ```
+
+## Screenshots
+
+### Connection Screen
+
+![Connection screen](/media/screenshot1.png)
+
+### Main Screen
+
+![Main screen - Application health](/media/screenshot2.png)
+
+![Main screen - Managed Functions](/media/screenshot3.png)
