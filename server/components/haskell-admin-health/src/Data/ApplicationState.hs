@@ -25,10 +25,7 @@ stateOf :: (Show a) => Async a -> IO ApplicationState
 stateOf x = fromPollResult <$> poll x
 
 -- | Converts the result of a 'Control.Concurrent.Async.poll' call to 'ApplicationState'
-fromPollResult ::
-     (Show a)
-  => Maybe (Either SomeException a)
-  -> ApplicationState
+fromPollResult :: (Show a) => Maybe (Either SomeException a) -> ApplicationState
 fromPollResult =
   \case
     Nothing -> Running

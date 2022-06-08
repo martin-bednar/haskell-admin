@@ -55,7 +55,16 @@ import Distribution.Simple
 main = defaultMain
 
 {-# START_FILE test/Spec.hs #-}
-{-# OPTIONS_GHC -F -pgmF hspec-discover #-}
+module Main where
+import Test.Hspec
+
+import qualified Spec.Admin.Component.MyComponent
+
+main :: IO ()
+main = hspec spec
+
+spec :: Spec
+spec = describe "Spec.Admin.Component.MyComponent" Spec.Admin.Component.MyComponent.spec
 
 {-# START_FILE test/Spec/Admin/Component/MyComponent.hs #-}
 {-# LANGUAGE DataKinds #-}

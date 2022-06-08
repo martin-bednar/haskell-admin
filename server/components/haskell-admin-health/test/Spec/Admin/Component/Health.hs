@@ -29,7 +29,4 @@ spec =
           200 {matchBody = "{\"tag\":\"Running\"}"}
         liftIO $ threadDelay 20000 -- Wait until myProgram stops
         get "/status" `shouldRespondWith`
-          200
-            { matchBody =
-                "{\"tag\":\"Finished\",\"contents\":\"5\"}"
-            }
+          200 {matchBody = "{\"contents\":\"5\",\"tag\":\"Finished\"}"}

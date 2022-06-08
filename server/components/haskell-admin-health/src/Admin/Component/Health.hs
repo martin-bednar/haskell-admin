@@ -14,6 +14,7 @@ import Admin.Components
 import Control.Concurrent.Async (Async, async)
 import Control.Monad.IO.Class (MonadIO, liftIO)
 import Data.ApplicationState
+import Data.Version (makeVersion)
 import Servant.API
 
 type HealthAPI = "status" :> Get '[ JSON] ApplicationState
@@ -21,10 +22,7 @@ type HealthAPI = "status" :> Get '[ JSON] ApplicationState
 type HealthComponent = Component "health" HealthAPI
 
 health :: (Show a) => Async a -> HealthComponent
-health as = Component {server = serveHealth as}
+health as = Component {server = serveHealth as, version = makeVersion [1]}
 
-serveHealth ::
-     (MonadIO m, Show a) => Async a -> m ApplicationState
+serveHealth :: (MonadIO m, Show a) => Async a -> m ApplicationState
 serveHealth as = liftIO $ stateOf as
-
-
