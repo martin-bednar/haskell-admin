@@ -1,5 +1,6 @@
 module Admin
   ( admin
+  , with
   ) where
 
 import Admin.Components

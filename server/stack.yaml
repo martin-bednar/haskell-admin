@@ -4,6 +4,7 @@ resolver:
 
 packages:
 - ./haskell-admin
+- ./haskell-admin-demo-app
 - ./haskell-admin-core
 - ./components/haskell-admin-health
 - ./components/haskell-admin-managed-functions

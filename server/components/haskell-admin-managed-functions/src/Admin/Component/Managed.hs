@@ -5,6 +5,7 @@ module Admin.Component.Managed
   , ManagedComponent
   , managed
   , serveManaged
+  , module Managed
   ) where
 
 import Admin.Components

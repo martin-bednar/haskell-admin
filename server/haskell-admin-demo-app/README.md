@@ -1,0 +1,1 @@
+# haskell-admin-demo-app

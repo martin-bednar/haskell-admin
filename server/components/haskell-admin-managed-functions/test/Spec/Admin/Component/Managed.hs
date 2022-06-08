@@ -6,8 +6,7 @@ module Spec.Admin.Component.Managed
   ( spec
   ) where
 
-import Admin.Component.Managed
-import Managed hiding (describe)
+import Admin.Component.Managed hiding (describe)
 import Servant
 import Test.Hspec
 import Test.Hspec.Wai
