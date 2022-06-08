@@ -43,8 +43,6 @@ class ManySymbolVal (xs :: [Symbol]) where
 instance ManySymbolVal '[] where
   manySymbolVal _ = []
 
-instance (KnownSymbol a, ManySymbolVal as) =>
-         ManySymbolVal (a ': as) where
+instance (KnownSymbol a, ManySymbolVal as) => ManySymbolVal (a ': as) where
   manySymbolVal _ =
-    symbolVal (Proxy :: Proxy a) :
-    manySymbolVal (Proxy :: Proxy as)
+    symbolVal (Proxy :: Proxy a) : manySymbolVal (Proxy :: Proxy as)

@@ -32,6 +32,7 @@ ghc-options:
 
 dependencies:
 - base >= 4.7 && < 5
+- aeson
 - bytestring
 - http-types
 - servant
@@ -56,3 +57,5 @@ tests:
     - haskell-admin-core
     - hspec
     - hspec-wai
+    - http-types
+    - wai-extra

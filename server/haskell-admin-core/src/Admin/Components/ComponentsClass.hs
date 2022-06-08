@@ -13,30 +13,37 @@ module Admin.Components.ComponentsClass
   ) where
 
 import Admin.Components.Component
+import Admin.Components.ComponentDescription
 import Admin.Components.ComponentList
-import Admin.Components.Internal.TypeLevel (ManySymbolVal)
+import Admin.Components.Internal.TypeLevel
+import Data.Version
 import GHC.TypeLits (KnownSymbol, Symbol, symbolVal)
 import Servant
 
-type ToServantAPI names api
-   = (ManySymbolVal names, HasServer api '[])
+type ToServantAPI names api = (ManySymbolVal names, HasServer api '[])
 
 class (ToServantAPI names apis) =>
       Components a (names :: [Symbol]) apis
   | a -> names apis
   where
   serveAll' :: a -> Server apis
-  getNames :: a -> [String]
+  describe :: a -> [ComponentDescription]
 
 instance (KnownSymbol name, HasServer api '[]) =>
          Components (Component name api) '[ name] (name :> api) where
   serveAll' c = server c
-  getNames _ = [symbolVal (Proxy :: Proxy name)]
+  describe c =
+    let n = symbolVal (Proxy :: Proxy name)
+        v = version c
+     in [ComponentDescription n v]
 
 instance (ToServantAPI names apis) =>
          Components (ComponentList names apis) names apis where
   serveAll' c = serveAll c
-  getNames c = namesOf c
+  describe c = descriptionsOf c
+
+getVersions :: Components a names apis => a -> [Version]
+getVersions = map componentVersion . describe
 
 infixr 9 `with`
 
@@ -55,4 +62,5 @@ with ::
   => Component name api
   -> a
   -> ComponentList (name : names) ((name :> api) :<|> apis)
-with new lst = ComponentList (server new :<|> serveAll' lst)
+with new lst =
+  ComponentList (server new :<|> serveAll' lst) (version new : getVersions lst)

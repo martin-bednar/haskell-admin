@@ -11,10 +11,12 @@ module Admin.Components.Component
   ( Component(..)
   ) where
 
+import Data.Version
 import GHC.TypeLits (Symbol)
 import Servant
 
-newtype Component (name :: Symbol) api =
+data Component (name :: Symbol) api =
   Component
     { server :: Server api
+    , version :: Version
     }
