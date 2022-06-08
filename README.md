@@ -79,6 +79,12 @@ stack test
 ```
 
 Client-side test suite is'nt implemented yet.
+
+## Planned features
+
+- [EKG](https://hackage.haskell.org/package/ekg) integration
+- more authentication options
+
 ## Screenshots
 
 ### Connection Screen
