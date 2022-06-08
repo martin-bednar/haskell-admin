@@ -1,7 +1,7 @@
 # Haskell Admin client
 
 
-This is a client application for Haskell Admin.
+_Client application for Haskell Admin_
 
 ## Usage
 

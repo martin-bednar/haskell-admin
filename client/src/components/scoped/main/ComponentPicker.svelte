@@ -21,13 +21,13 @@
 </style>
 
 <div>
-        {#each components as component}
-            {#if isInRegisty(component)}
+        {#each components as {componentName}}
+            {#if isInRegisty(componentName)}
             <div 
                 class="component-item" 
-                class:selected="{selectedComponent === component}"
-                on:click="{() => selectedComponent = component}"
-                >{getNameById(component)}</div>
+                class:selected="{selectedComponent === componentName}"
+                on:click="{() => selectedComponent = componentName}"
+                >{getNameById(componentName)}</div>
             {/if}
         {/each}
 </div>
