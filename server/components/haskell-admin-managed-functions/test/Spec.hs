@@ -1,4 +1,5 @@
 module Main where
+
 import Test.Hspec
 
 import qualified Spec.Admin.Component.Managed

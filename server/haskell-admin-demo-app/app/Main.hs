@@ -2,11 +2,11 @@
 
 module Main where
 
-import Control.Concurrent.MVar
-import Control.Concurrent
-import Control.Monad
 import Admin
 import Admin.Components.All hiding (run)
+import Control.Concurrent
+import Control.Concurrent.MVar
+import Control.Monad
 import Network.Wai.Handler.Warp (run)
 
 data Msg
@@ -28,14 +28,15 @@ main = do
   let components = health formerMain `with` managed agent
       apiKeys = ["myApiKey"]
       agent :: Agent SR
-      agent = fromList 
-        [ ("setMsg", toProbe $ swapMVar msg)
-        , ("setInterval", toProbe $ swapMVar interval)
-        ]
+      agent =
+        fromList
+          [ ("setMsg", toProbe $ swapMVar msg)
+          , ("setInterval", toProbe $ swapMVar interval)
+          ]
   run 3001 $ admin apiKeys components
 
 mainLoop :: MVar Msg -> MVar Int -> IO ()
-mainLoop msg interval 
-  = forever $ do
+mainLoop msg interval =
+  forever $ do
     readMVar msg >>= print
     readMVar interval >>= threadDelay

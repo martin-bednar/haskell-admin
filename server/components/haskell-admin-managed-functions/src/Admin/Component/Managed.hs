@@ -9,21 +9,18 @@ module Admin.Component.Managed
   ) where
 
 import Admin.Components
+import Data.Version (makeVersion)
 import Managed
 import Managed.Connectors.HTTPConnector
 import Servant
-import Data.Version (makeVersion)
 
 type ManagedAPI = HTTPConnectorAPI
 
 type ManagedComponent = Component "managed" ManagedAPI
 
 managed :: Agent SR -> ManagedComponent
-managed agent 
-  = Component 
-  { server = serveManaged agent
-  , version = makeVersion [1]
-  }
+managed agent =
+  Component {server = serveManaged agent, version = makeVersion [1]}
 
 serveManaged :: Agent SR -> Server ManagedAPI
 serveManaged = httpConnectorServer
