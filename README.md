@@ -1,5 +1,9 @@
 # Haskell Admin
 
+![GitHub](https://img.shields.io/github/license/martin-bednar/haskell-admin)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/martin-bednar/haskell-admin/Haskell%20Admin%20Server%20CI?label=Server%20build)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/martin-bednar/haskell-admin/Haskell%20Admin%20Client%20CI?label=Client%20build)
+
 _Remote Management Suite for Haskell Applications_
 
 __This project is in an early stage of development. Expect things to break, and don't be suprised by the lack of documentation.__
